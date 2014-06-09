@@ -25,3 +25,24 @@ Here, the summary is taken to be the first line of the post. Because no
 beginning marker was found, it starts at the top of the body. It is possible
 to leave out the end marker instead, in which case the summary will start at the
 beginning marker and continue to the end of the body.
+
+reST example
+~~~~~~~~~~~~
+
+Inserting the markers into a reStructuredText document makes use of the
+comment directive, because raw HTML is automatically escaped. The reST equivalent of the above Markdown example looks like this::
+
+    My super title
+    ##############
+
+    :date: 2010-12-03 10:20
+    :tags: thats, awesome
+    :category: yeah
+    :slug: my-super-post
+    :author: Alexis Metaireau
+
+    This is the content of my super blog post.
+
+    .. PELICAN_END_SUMMARY
+
+    and this content occurs after the summary.
